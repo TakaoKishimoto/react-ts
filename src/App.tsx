@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Heading } from '@chakra-ui/react';
 import Counter from 'components/Counter';
+import RegistrationForm from 'components/RegistrationForm';
 import Timer from 'components/Timer';
 import './App.css';
 
@@ -15,6 +16,10 @@ const App: FC = () => {
       </Heading>
       <Counter />
       <Timer />
+      <Heading as="h2" mb={6}>
+        Pure React Form (no frame work)
+      </Heading>
+      <RegistrationForm />
     </>
   );
 };

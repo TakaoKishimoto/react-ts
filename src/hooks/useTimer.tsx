@@ -5,6 +5,12 @@ export const useTimer = (maxCount: number): [number, () => void] => {
   const tick = (): void => setTimeLeft((t) => t - 1);
   const reset = (): void => setTimeLeft(maxCount);
 
+  // Tried add stopwatch but gave up
+  // const [running, setRunning] = useState(true);
+  // useEffect(() => {
+  //   running ? setRunning(false) : setRunning(true);
+  // }, [running]);
+
   useEffect(() => {
     const timerId = setInterval(tick, 1000);
 
