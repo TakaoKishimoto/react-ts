@@ -14,7 +14,7 @@ type Props = { maxCount?: number };
 const MAX_COUNT = 60;
 
 const Timer: FC<Props> = ({ maxCount = MAX_COUNT }) => {
-  const [timeLeft, reset] = useTimer(maxCount);
+  const [timeLeft, isPrime, reset] = useTimer(maxCount);
 
   return (
     <Box
@@ -27,11 +27,10 @@ const Timer: FC<Props> = ({ maxCount = MAX_COUNT }) => {
     >
       <Stat mb={2}>
         <StatLabel fontSize={18}>Count</StatLabel>
-        <StatNumber fontSize={42}>{timeLeft}</StatNumber>
+        <StatNumber fontSize={42} color={isPrime ? 'pink.300' : 'black'}>
+          {timeLeft}
+        </StatNumber>
         <ButtonGroup maxW="xs" m={2} variant="contained" isAttached>
-          {/* <Button w="xs" colorScheme="green" variant="solid" onClick={reset}>
-            Start
-          </Button> */}
           <Button
             w="xs"
             colorScheme="red"
