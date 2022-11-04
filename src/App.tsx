@@ -17,7 +17,7 @@ const App: FC = () => {
       <Counter />
       <Timer />
       <Heading as="h2" mb={6}>
-        Pure React Form (no frame work)
+        Add your info
       </Heading>
       <RegistrationForm />
     </>
