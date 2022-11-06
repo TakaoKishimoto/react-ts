@@ -18,7 +18,7 @@ const Timer: FC<Props> = ({ maxCount = MAX_COUNT }) => {
 
   return (
     <Box
-      p={5}
+      p={6}
       w="sm"
       borderWidth="1px"
       borderRadius="lg"
